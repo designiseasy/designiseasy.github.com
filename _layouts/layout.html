@@ -14,39 +14,29 @@
 
   <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
 
-  <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/base.css" type="text/css" media="all" />
   <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
-  <link media="only screen and (max-device-width: 480px)" href="/css/iphone.css" type="text/css" rel="stylesheet" />
-  <link media="only screen and (device-width: 768px)" href="/css/iphone.css" type="text/css" rel="stylesheet" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 </head>
 
-<body>
-  <section class="sidebar">
-    <a href="/">
-    </a>
-
-    <section class="name">
-      <a href="/">
-        <span id="fname">{{ site.name|split:' '|first }}</span>
-        <span id="lname">{{ site.name|split:' '|last }}</span>
-      </a>
-    </section>
-
-    <section class="meta">
-      <a href="https://twitter.com/{{ site.twitter }}"><img src="/images/twitter.png"></a>
-    </section>
-
-    <section class="sections">
-      <ul>
-        <li><a href="/about.html">about</a></li>
-        <li><a href="/">posts</a></li>
-      </ul>
-    </section>
-  </section>
-
+<body {% if page.title %}class="{{ page.body-class }}"{% endif %}>
+  <header role="banner">
+  <h1>
+    <a href="/" class="logo">Design Is Easy</a>
+    <span class="tagline"></span>
+  </h1>
+  {% include nav.html %}
+  </header>
+  <section class="main">
   {{ content }}
+  </section>
+  <footer>
+  &copy; 2013 Design Is Easy, Inc.
+
+{% include nav.html %}
+      <a href="https://twitter.com/{{ site.twitter }}"><img src="/images/twitter.png"></a>
+  </footer>
 </body>
 
 </html>
