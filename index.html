@@ -3,6 +3,9 @@ layout: layout
 title: "Posts"
 ---
 
+    {% for page in site.pages %}
+    {{ page.url }} 
+    {% endfor %}
 <section class="content">
   <ul class="listing">
     {% for post in site.posts %}
