@@ -1,19 +1,26 @@
+# designiseasy.com
+
+## Installation
+This uses a fancy trick I learned from Octopress to manage branches. The
+branch any work should be done in is `source`. Anything that's pushed to
+`master` will show up on designiseasy.com.
+
+Since we can switch the default branch on a github repo, installation
+becomes a lot easier. Just copy and paste these commands:
+
 `git clone git://github.com/designiseasy/designiseasy.github.com.git`
 
-`git remote update`
+`cd deploy`
 
-`git checkout -t origin source`
+`git init && git remote add origin git://github.com/designiseasy/designiseasy.github.com.git && git pull origin master`
 
-`mkdir deploy && cd deploy`
+The fun part is that now when you `cd deploy` and then `cd -`, you
+actually switch branches! This makes it much easier to run Jekyll with
+plugins and then copy over the `_site` dir to `deploy`, add, commit, and then
+`git push origin master --force` when you want to deploy.
 
-`git init && git remote add origin git://github.com/designiseasy/designiseasy.github.com.git && git pull`
 
-# Left
+## Info
 
-Left is a clean, whitespace-happy layout for [Jekyll](https://github.com/mojombo/jekyll).
-
-This is designed to be an easy layout to modify for your own blog. It was
-extracted from [zachholman.com](http://zachholman.com/), which means it was
-battle-hardened from years of posting serious blog posts about emoji and swear
-words.
+Since we didn't feel like starting with a blank layout for [Jekyll](https://github.com/mojombo/jekyll), this repo was forked from @holman's [Left](https://github.com/holman/left). Thanks for the leg up Zach.
 
