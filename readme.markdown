@@ -1,7 +1,11 @@
 `git clone git://github.com/designiseasy/designiseasy.github.com.git`
+
 `git remote update`
+
 `git checkout -t origin source`
+
 `mkdir deploy && cd deploy`
+
 `git init && git remote add origin git://github.com/designiseasy/designiseasy.github.com.git && git pull`
 
 # Left
