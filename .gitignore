@@ -1,5 +1,6 @@
 _site
 .sass-cache/*
 */.sass-cache/*
+static/css/*
 deploy/
 deploy/*
