@@ -14,4 +14,6 @@ currtime=`date -u`
 git commit -m "Deploy at ${currtime}"
 echo "Pushing latest"
 git push origin master --force
+# put us back where we started
+cd ..
 echo "All done! Check it out at http://designiseasy.github.com"

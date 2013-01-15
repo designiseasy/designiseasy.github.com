@@ -7,4 +7,4 @@ url: http://designiseasy.com
 description: A fantastic blog that is fantastic.
 twitter: designiseasy
 permalinks: pretty
-exclude: ['sass', 'atom.xml', 'readme.markdown', 'LICENSE', 'CNAME']
+exclude: ['sass', 'deploy', 'atom.xml', 'readme.markdown', 'LICENSE', 'CNAME']
