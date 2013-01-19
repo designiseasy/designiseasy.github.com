@@ -50,6 +50,12 @@
     });
   });
 
+  win.addEventListener('popstate', function (e) {
+    getPage(win.location.pathname, function (data) {
+      replacePage(data);
+    });
+  }, false);
+
   win.addEventListener('load', function() {
     new FastClick(doc.body);
   }, false);
