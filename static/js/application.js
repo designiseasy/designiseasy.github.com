@@ -22,7 +22,7 @@
 
   replacePage = function (content) {
     var mainEle = doc.getElementById('main'),
-      htmlDoc = doc.implementation.createHTMLDocument(doc.title);
+      htmlDoc = document.implementation.createHTMLDocument(doc.title);
     htmlDoc.body.innerHTML = content;
     mainEle.innerHTML = htmlDoc.getElementById('main').innerHTML;
   };
