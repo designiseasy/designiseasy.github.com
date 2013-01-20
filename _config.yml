@@ -7,7 +7,7 @@ url: http://designiseasy.com
 name: Design is Easy
 description: A fantastic blog that is fantastic.
 twitter: designiseasy
-permalinks: pretty
+permalink: /:categories/:title.html
 exclude: ['sass', 'Gemfile', 'Gemfile.lock', 'deploy', 'site_deploy.sh', 'atom.xml', 'readme.markdown', 'LICENSE', 'CNAME']
 
 asset_bundler:

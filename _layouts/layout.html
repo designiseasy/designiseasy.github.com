@@ -22,7 +22,7 @@
   <!--<link rel="stylesheet" href="/css/pygments.css" type="text/css" />-->
 </head>
 
-<body {% if page.title %}class="{{ page.body-class }}"{% endif %}>
+<body {% if page.body-class %}class="{{ page.body-class }}"{% endif %}>
   <header role="banner">
     <h1>
       <a href="/" class="logo">Design Is Easy</a>
@@ -36,11 +36,11 @@
   </section>
 
   <footer>
-    &copy; 2013 Design Is Easy, Inc.
-
     {% include nav.html %}
     <a href="https://twitter.com/{{ site.twitter }}">follow us</a>
+    &copy; 2013 Design Is Easy, Inc.
   </footer>
+
   {% bundle %}
    - /static/js/delegate.js 
    - /static/js/fastclick.js 
