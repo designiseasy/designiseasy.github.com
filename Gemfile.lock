@@ -1,0 +1,16 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    closure-compiler (1.1.8)
+    liquid (2.4.0)
+    mini_magick (3.4)
+      subexec (~> 0.2.1)
+    subexec (0.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  closure-compiler
+  liquid (= 2.4.0)
+  mini_magick

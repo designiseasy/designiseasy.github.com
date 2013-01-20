@@ -1,6 +1,8 @@
 _site
 .sass-cache/*
 */.sass-cache/*
+_asset_bundler_cache/
+_asset_bundler_cache/*
 static/css/*
 deploy/
 deploy/*

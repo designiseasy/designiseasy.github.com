@@ -7,4 +7,16 @@ url: http://designiseasy.com
 description: A fantastic blog that is fantastic.
 twitter: designiseasy
 permalinks: pretty
-exclude: ['sass', 'deploy', 'site_deploy.sh', 'atom.xml', 'readme.markdown', 'LICENSE', 'CNAME']
+exclude: ['sass', 'Gemfile', 'Gemfile.lock', 'deploy', 'site_deploy.sh', 'atom.xml', 'readme.markdown', 'LICENSE', 'CNAME']
+
+asset_bundler:
+  compress:
+    js: 'closure'
+    css: false
+  base_path: /static/built/
+  server_url:
+  remove_bundled: false
+  dev: false
+  markup_templates:
+    js: "<script src='{{url}}'></script>\n"
+    css: "<link rel='stylesheet' type='text/css' href='{{url}}' />\n"
