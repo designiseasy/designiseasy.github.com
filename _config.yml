@@ -31,8 +31,8 @@ prose:
       client: "Client Here"
       name: "Project Name Here"
       work-desc: "Abstract"
-      category: work
-      preview-image: name-of-image.jpg
+      category: "work"
+      preview-image: "name-of-image.jpg"
     "_posts/projects": |
       name: "Project Name"
       img:  "Project Thumbnail"
