@@ -21,3 +21,6 @@ asset_bundler:
   markup_templates:
     js: "<script src='{{url}}'></script>\n"
     css: "<link rel='stylesheet' type='text/css' href='{{url}}' />\n"
+
+
+

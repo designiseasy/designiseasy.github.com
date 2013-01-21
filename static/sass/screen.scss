@@ -1,1 +1,40 @@
 @import "normalize";
+@import "compass/css3/box-sizing";
+
+
+* {
+  @include box-sizing("border-box");
+}
+
+html {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+}
+
+
+.main {
+  max-width: 46em;
+  position: relative;
+  margin: 0 auto;
+}
+
+.work {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    width: 250px;
+    padding: 0 10px;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.hero {
+  font: 1.25em/1.7 normal Arial, sans-serif;
+  padding: 0 10px;
+}
+.work-title, .work-desc {
+  display: block;
+}

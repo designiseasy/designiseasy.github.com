@@ -1,16 +1,20 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    chunky_png (1.2.7)
     closure-compiler (1.1.8)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    fssm (0.2.9)
     liquid (2.4.0)
-    mini_magick (3.4)
-      subexec (~> 0.2.1)
-    subexec (0.2.2)
+    sass (3.2.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   closure-compiler
+  compass
   liquid (= 2.4.0)
-  mini_magick

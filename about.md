@@ -8,7 +8,7 @@ permalink: about/
 
 #Design is wha?
 
-Three guys in Kansas City designing and building web things for companies & people the web over. That's us & we do work as Design is Easy. We want to make your life easier. <a href="#contact">Talk with us</a> about how we can help you do that.
+Three guys in Kansas City designing and building web things for companies and people the web over. That's us and we do work as Design is Easy. We want to make your life easier. <a href="#contact">Talk with us</a> about how we can help you do that.
 
 ##Justin Farmer 
 

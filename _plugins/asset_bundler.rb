@@ -228,7 +228,6 @@ END
 
       @hash = Digest::MD5.hexdigest(@content)
       @filename = "#{@hash}.#{@type}"
-      print @filename
       cache_file = File.join(cache_dir(), @filename)
 
       if File.readable?(cache_file) and @config['compress'][@type]
