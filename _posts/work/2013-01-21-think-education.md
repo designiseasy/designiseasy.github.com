@@ -6,7 +6,7 @@ url: "http://thinkeducationusa.com"
 work-desc: "Design and development"
 category: "work"
 preview-image: "think-ed-thumb.jpg"
-
+layout: work
 published: true
 ---
 

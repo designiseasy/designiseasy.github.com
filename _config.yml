@@ -27,11 +27,12 @@ prose:
   rooturl: "_posts"
   metadata:
     "_posts/work": |
-      title:    "Title of your article"
+      title: "Title of your article"
       client: "Client Here"
       name: "Project Name Here"
       work-desc: "Abstract"
       category: "work"
+      layout: "work"
       preview-image: "name-of-image.jpg"
     "_posts/projects": |
       name: "Project Name"

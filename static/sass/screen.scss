@@ -1,5 +1,6 @@
 @import "normalize";
 @import "compass/css3/box-sizing";
+@import "compass/css3/transition";
 
 
 * {
@@ -9,11 +10,33 @@
 html {
   font-family: Arial, sans-serif;
   line-height: 1.4;
+
+}
+
+a {
+  display: inline-block;
+  @include transition(background-color .2s ease-in-out, color .2s
+  ease-in-out, border-color .2s ease-in-out);
+  color: #333;
+  border-bottom: 2px dashed #333;
+  text-decoration: none;
+  line-height: 1;
+  padding: .1em;
+  &:visited {
+    color:#555;
+    border-color: #555;
+  }
+  &:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: transparent;
+  
+  }
 }
 
 
 .main {
-  max-width: 46em;
+  max-width: 47em;
   position: relative;
   margin: 0 auto;
 }
@@ -25,9 +48,19 @@ html {
 
   li {
     width: 250px;
-    padding: 0 10px;
     display: inline-block;
     vertical-align: top;
+    a {
+      border: none;
+      line-height: 1.4;
+      text-decoration: none;
+      padding: 0 .625em 1.4em .625em;
+      @include single-transition(none);
+      &:hover {
+        background-color: inherit;
+        color: inherit;
+      }
+    }
   }
 }
 
@@ -37,4 +70,10 @@ html {
 }
 .work-title, .work-desc {
   display: block;
+}
+
+.work-desc {
+  font-size: .8em;
+  font-style: italic;
+
 }
