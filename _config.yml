@@ -4,7 +4,7 @@ rdiscount:
   extensions: [smart]
 
 url: http://designiseasy.com
-name: Design is Easy
+name: design is easy
 description: A fantastic blog that is fantastic.
 twitter: designiseasy
 permalink: /:categories/:title.html
