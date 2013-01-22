@@ -55,8 +55,7 @@ html {
 
 a {
   display: inline-block;
-  @include transition(background-color .2s ease-in-out, color .2s
-  ease-in-out, border-color .2s ease-in-out);
+  @include transition(all .4s ease-in-out);
   color: #333;
   border-bottom: 2px dashed #333;
   text-decoration: none;
