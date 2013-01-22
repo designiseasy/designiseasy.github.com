@@ -8,7 +8,7 @@ name: Design is Easy
 description: A fantastic blog that is fantastic.
 twitter: designiseasy
 permalink: /:categories/:title.html
-exclude: ['sass', 'Gemfile', 'Gemfile.lock', 'deploy', 'site_deploy.sh', 'atom.xml', 'readme.markdown', 'LICENSE', 'CNAME']
+exclude: ['sass', 'grunticon.loader.txt', 'preview.html', 'config', 'sources', 'node_modules', 'grunt.js', 'package.json', 'Gemfile', 'Gemfile.lock', 'deploy', 'site_deploy.sh', 'atom.xml', 'readme.markdown', 'LICENSE', 'CNAME']
 
 asset_bundler:
   compress:

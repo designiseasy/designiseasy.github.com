@@ -6,3 +6,4 @@ _asset_bundler_cache/*
 static/css/*
 deploy/
 deploy/*
+node_modules/

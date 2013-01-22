@@ -1,9 +1,10 @@
 <nav>
-<ul>
-  {% for page in site.pages %}
-  {% if page.categories contains 'nav' %}
-  <li><a href="{{ page.url }}" class="nav-{{ page.title | downcase | replace:' ', '-' }}">{{ page.title }}</a>
-  {% endif %}
-  {% endfor %}
-</ul>
+  <ul>
+    <li><a href="/" class="nav-home">home</s>
+    {% for page in site.pages %}
+    {% if page.categories contains 'nav' %}
+    <li><a href="{{ page.url }}" class="nav-{{ page.title | downcase | replace:' ', '-' }}">{{ page.title | downcase }}</a>
+    {% endif %}
+    {% endfor %}
+  </ul>
 </nav>
