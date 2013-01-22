@@ -23,9 +23,12 @@
 
   replacePage = function (content) {
     var mainEle = doc.getElementById('main'),
-      htmlDoc = document.implementation.createHTMLDocument(doc.title);
+      htmlDoc = document.implementation.createHTMLDocument(doc.title),
+      newTitle;
     htmlDoc.body.innerHTML = content;
+    newTitle = htmlDoc.getElementById('title');
     mainEle.innerHTML = htmlDoc.getElementById('main').innerHTML;
+    doc.title = newTitle.innerHTML;
   };
 
   pushUrl = function (url) {
