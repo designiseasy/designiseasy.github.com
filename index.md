@@ -3,7 +3,7 @@ layout: layout
 title: "Home"
 ---
 <p class="hero">
-Three guys in Kansas City designing and building web things for companies and people the web over. We are <span class="company">design is easy</span>. We want to make your life easier. <a href="/about/#contact">Talk with us</a> about how we can help you do that.
+Three guys in Kansas City designing and building web things for companies and people the web over. We are <span class=company>design is easy</span>. We want to make your life easier. <a href="/about/#contact">Talk with us</a> about how we can help you do that.
 </p>
 
 
