@@ -18,6 +18,12 @@ Install rvm, then install gems with:
 
 `bundle install`
 
+Make sure you have npm installed and then:
+
+`npm install -g grunt-cli`
+
+`npm install`
+
 The fun part is that now when you `cd deploy` and then `cd -`, you
 actually switch branches! This makes it much easier to run Jekyll with
 plugins and then copy over the `_site` dir to `deploy`, add, commit, and then

@@ -43,6 +43,26 @@
   }
 }
 
+$break-small: 15.625em;
+$one-up-home: 31.25em;
+$two-up-home: 48em;
+$break-large: 51em;
+
+@mixin respond-to($media) {
+  @if $media == small-screens {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == single-column {
+    @media only screen and (max-width: $one-up-home) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (max-width: $two-up-home) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
 * {
   @include box-sizing("border-box");
 }
@@ -77,8 +97,14 @@ a {
   float: left;
   width: 290px;
   height: 40px;
+  -webkit-background-size: contain;
   position: relative;
-  left: -50px;
+  @include respond-to(single-column) {
+    width: 240px;
+  }  
+  @include respond-to(wide-screens) {
+    left: -50px;
+  }
   @include image-replace;
   &:hover {
     background-color: transparent;
@@ -86,11 +112,15 @@ a {
 }
 .header nav {
   float: right;
+  margin-right: 1em;
   ul {
     overflow: auto;
     list-style-type: none;
     padding: 0;
     margin: .5em 0 0 0;
+    @include respond-to(single-column) {
+      margin: .25em 0 0 0;
+    }  
     width: auto;
   }
   li {
@@ -101,8 +131,17 @@ a {
     border: none;
     padding: .5em 1em;
     font-size: .875em;
+    @include respond-to(single-column) {
+      border: 1px solid black;
+    }  
+    &.nav-home {
+      @include respond-to(single-column) {
+        display: none;
+      }  
+    }
   }
 }
+
 
 .header, .main {
   max-width: 47em;
@@ -116,11 +155,19 @@ a {
 }
 .main {
   margin-top: 4.4em;
+  @include respond-to(medium-screens) {
+  margin-top: 2em;
+  }  
 }
 .hero {
   font: 1.25em/1.7 normal Arial, sans-serif;
-  padding: 0 10px;
   margin: 0 0 2.125em 0;
+  @include respond-to(medium-screens) {
+    padding: 0 1em;
+  }
+  @include respond-to(wide-screens) {
+    padding: 0 10px;
+  }  
 }
 .work-img {
   position: relative;
@@ -137,9 +184,16 @@ a {
 
 .work {
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  position: relative;
 
+  @include respond-to(medium-screens) {
+    max-width: 31.25em;
+  }
+  @include respond-to(single-column) {
+    max-width: 15.625em;
+  }  
   li {
     width: 250px;
     padding: 0 .625em 1.4em .625em;
