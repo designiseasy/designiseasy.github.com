@@ -10,9 +10,13 @@ becomes a lot easier. Just copy and paste these commands:
 
 `git clone git://github.com/designiseasy/designiseasy.github.com.git`
 
-`cd deploy`
+`mkdir deploy && cd deploy`
 
 `git init && git remote add origin git@github.com:designiseasy/designiseasy.github.com.git && git pull origin master`
+
+Install rvm, then install gems with:
+
+`bundle install`
 
 The fun part is that now when you `cd deploy` and then `cd -`, you
 actually switch branches! This makes it much easier to run Jekyll with
