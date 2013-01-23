@@ -2,15 +2,8 @@
 layout: layout
 ---
 
-<section class="content">
-  <h1>
-    <a href="{{ page.url }}">{{ page.title }}</a>
-  </h1>
-
-  <section class="byline">
-    {{ page.date | date: "%B %e, %Y" }}
-  </section>
-
+<div class="content">
+  <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
   {{ content }}
-
+</div>
 

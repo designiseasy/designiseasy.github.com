@@ -228,3 +228,13 @@ a {
   font-size: .8em;
   font-style: italic;
 }
+
+
+// Other pages
+
+.content {
+  @include respond-to(medium-screens) {
+
+  padding: 0 1.5em;
+  }  
+}

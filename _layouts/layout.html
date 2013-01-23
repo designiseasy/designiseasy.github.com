@@ -3,10 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title id="title">
-    {% if page.title %}
-      {{ page.title }} / /
-    {% endif %}
-    {{ site.name }}
+    {% if page.title %}{{ page.title }} / / {% endif %} {{ site.name }}
   </title>
 
   <meta name="author" content="{{ site.name }}" />
@@ -27,7 +24,7 @@ grunticon( [ "/static/css/icons.data.svg.css", "/static/css/icons.data.png.css",
   
 </head>
 
-<body {% if page.body-class %}class="{{ page.body-class }}"{% endif %}>
+<body>
   <header role="banner" class="header">
     <h1>
       <a href="/" class="icon-other-logo logo">Design Is Easy</a>
