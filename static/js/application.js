@@ -4,7 +4,8 @@
     getPage,
     replacePage,
     pushUrl,
-    clickOnLink;
+    clickOnLink,
+    hasHash;
 
   getPage = function (url, callback) {
     req = new XMLHttpRequest();
@@ -29,10 +30,11 @@
     newTitle = htmlDoc.getElementById('title');
     mainEle.innerHTML = htmlDoc.getElementById('main').innerHTML;
     doc.title = newTitle.innerHTML;
+    return doc.title;
   };
 
-  pushUrl = function (url) {
-    win.history.pushState({}, doc.title, url);
+  pushUrl = function (url, title) {
+    win.history.pushState({}, title, url);
   };
 
   clickOnLink = function (e, targ) {
@@ -56,28 +58,36 @@
     // do ajax
     getPage(targ.pathname, function (data) {
       // insert new content
-      replacePage(data);
+      var newTitle = replacePage(data);
       // update the URL
-      pushUrl(targ.pathname);
-      // nasty hack to follow #links across pushState
+      pushUrl(targ.pathname, newTitle);
       if (targ.hash){
+        // nasty hack to follow #links across pushState
+        // but don't trigger popstate when calling replace
+        hasHash = true;
         window.location.replace(targ.pathname + targ.hash);
       }
     });
   };
 
 
-  win.addEventListener('popstate', function (e) {
-    getPage(win.location.pathname, function (data) {
-      replacePage(data);
-    });
-  }, false);
 
   win.addEventListener('load', function() {
     var delegate;
     new FastClick(doc.body);
     delegate = new Delegate(doc.body);
     delegate.on('click', 'a', clickOnLink);
+
+    win.addEventListener('popstate', function (e) {
+      if (hasHash) {
+        hasHash = null;
+        return;
+      }
+      getPage(win.location.pathname, function (data) {
+        replacePage(data);
+      });
+    }, false);
+
   }, false);
 
 })(this);
