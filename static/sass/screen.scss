@@ -58,6 +58,9 @@ $break-large: 51em;
   @else if $media == medium-screens {
     @media only screen and (max-width: $two-up-home) { @content; }
   }
+  @else if $media == medium-up-screens {
+    @media only screen and (min-width: $two-up-home) { @content; }
+  }
   @else if $media == wide-screens {
     @media only screen and (min-width: $break-large) { @content; }
   }
@@ -207,7 +210,9 @@ footer {
     @include transition(background-color .4s ease-in-out);
     display: block;
     position: absolute;
-    background-color: #7f7f7f;
+    @include respond-to(medium-up-screens) {
+      background-color: #7f7f7f;
+    }
     width: 100%;
     height: 100%;
   }
