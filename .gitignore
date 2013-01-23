@@ -3,7 +3,9 @@ _site
 */.sass-cache/*
 _asset_bundler_cache/
 _asset_bundler_cache/*
-static/css/*
+static/css/print.css
+static/css/screen.css
+static/css/pygments.css
 deploy/
 deploy/*
 node_modules/
