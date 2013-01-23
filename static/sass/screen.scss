@@ -63,16 +63,35 @@ $break-large: 51em;
   }
 }
 
+@mixin calc($attr, $default, $expression) {
+  #{$attr}: $default;
+  #{$attr}: -moz-calc(#{$expression});
+  #{$attr}: -webkit-calc(#{$expression});
+  #{$attr}: calc(#{$expression});
+}
+
+
+
 * {
   @include box-sizing("border-box");
 }
 
-html {
+html, body {
   font-family: Arial, sans-serif;
   line-height: 1.4;
+  height: 100%;
+  position: relative;
+  padding: 0;
+  margin: 0;
 
 }
-
+.wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  padding-bottom: 5em;
+  margin-bottom: -5em;
+}
 a {
   display: inline-block;
   @include transition(all .4s ease-in-out);
@@ -163,11 +182,13 @@ a {
 footer {
   color: rgba(255,255,255, .5);
   background: #000;
-  font-size: .75em;
   line-height: 1.2;
-  margin: 2em 0 0 0;
   padding: 1.5em;
   text-align: center;
+  height: 5em;
+  span {
+  font-size: .75em;
+  }
 }
 .hero {
   font: 1.25em/1.7 normal Arial, sans-serif;
