@@ -77,7 +77,10 @@
     new FastClick(doc.body);
     delegate = new Delegate(doc.body);
     delegate.on('click', 'a', clickOnLink);
-
+    // do some touch-specific styling
+    if ('ontouchstart' in window) {
+      doc.body.className = 'has-touch';
+    }
     win.addEventListener('popstate', function (e) {
       if (hasHash) {
         hasHash = null;
