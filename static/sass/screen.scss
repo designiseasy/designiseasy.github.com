@@ -127,7 +127,7 @@ a {
   -webkit-background-size: contain;
   position: relative;
   @include respond-to(single-column) {
-    width: 60%;
+    width: 70%;
   }  
   @include respond-to(wide-screens) {
     left: -50px;
@@ -146,7 +146,7 @@ a {
     padding: 0;
     margin: .5em 0 0 0;
     @include respond-to(single-column) {
-      margin: .25em 0 0 0;
+      margin: 0;
     }  
     width: auto;
   }
