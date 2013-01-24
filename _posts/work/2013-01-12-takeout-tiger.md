@@ -11,9 +11,8 @@ Tired of awful restaurant sites, Takeout tiger did stuf and stuff. A small group
 
 
 <div class="clearfix work-samples">
-<img src=/static/images/work/tt-menu.jpg class=right />
-<img src=/static/images/work/tt-1.jpg />
-<img src=/static/images/work/tt-2.jpg />
-<img src=/static/images/work/tt-3.jpg />
-
+  <img src=/static/images/work/tt-menu.jpg class=right />
+  <img src=/static/images/work/tt-1.jpg />
+  <img src=/static/images/work/tt-2.jpg />
+  <img src=/static/images/work/tt-3.jpg />
 </div>
