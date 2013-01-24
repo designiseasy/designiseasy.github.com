@@ -70,13 +70,6 @@ $break-large: 51em;
   }
 }
 
-@mixin calc($attr, $default, $expression) {
-  #{$attr}: $default;
-  #{$attr}: -moz-calc(#{$expression});
-  #{$attr}: -webkit-calc(#{$expression});
-  #{$attr}: calc(#{$expression});
-}
-
 .clearfix{
   @include clearfix;
 }
@@ -92,8 +85,8 @@ html, body {
   position: relative;
   padding: 0;
   margin: 0;
-
 }
+
 .wrap {
   min-height: 100%;
   height: auto !important;
@@ -101,6 +94,7 @@ html, body {
   padding-bottom: 5em;
   margin-bottom: -5em;
 }
+
 a {
   display: inline-block;
   @include transition(all .4s ease-in-out);
@@ -133,7 +127,7 @@ a {
   -webkit-background-size: contain;
   position: relative;
   @include respond-to(single-column) {
-    width: 240px;
+    width: 60%;
   }  
   @include respond-to(wide-screens) {
     left: -50px;
