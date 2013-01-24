@@ -2,14 +2,15 @@
 layout: layout
 body-class: work
 ---
-<div class="content">
-  <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+<div class=content>
+  <img class=banner src=/static/images/work/{{ page.banner-image }} />
+  <h1><a href={{ page.url }}>{{ page.title }}</a></h1>
 
   {{ content }}
 
-  <section class="cta">
+  <section class=cta>
   <p>
-  Like what you see? <a href="/about/#contact"> Get in touch</a>, and see what we can do for you.
+  Like what you see? <a href=/about/#contact> Get in touch</a>, and see what we can do for you.
   </p>
   </section>
 </div>

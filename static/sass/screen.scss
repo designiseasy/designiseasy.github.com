@@ -55,6 +55,10 @@ $break-large: 51em;
   @else if $media == single-column {
     @media only screen and (max-width: $one-up-home) { @content; }
   }
+  @else if $media == single-up {
+    @media only screen and (min-width: $one-up-home) { @content; }
+  }
+
   @else if $media == medium-screens {
     @media only screen and (max-width: $two-up-home) { @content; }
   }
@@ -73,7 +77,9 @@ $break-large: 51em;
   #{$attr}: calc(#{$expression});
 }
 
-
+.clearfix{
+  @include clearfix;
+}
 
 * {
   @include box-sizing("border-box");
@@ -221,6 +227,10 @@ footer {
     width: 100%;
     height: 100%;
   }
+  img {
+    height: 130px;
+    width: 230px;
+  }
 }
 
 .work {
@@ -279,3 +289,26 @@ footer {
   padding: 0 1.5em;
   }  
 }
+
+.banner, .work-preview{
+  max-width: 100%;
+  border: 1px solid rgba(0,0,0,.3);
+}
+
+
+.work-samples img {
+    border: 1px solid rgba(0,0,0,.3);
+    max-width: 100%;
+    margin-bottom: 1em;
+    @include respond-to(single-up) {
+      max-width: 65%;
+      float:left;
+    }
+    &.right {
+      @include respond-to(single-up) {
+        max-width: 33%;
+        float: right;
+      }
+    }
+  }
+
