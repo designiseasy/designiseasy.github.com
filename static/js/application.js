@@ -24,11 +24,14 @@
 
   replacePage = function (content) {
     var mainEle = doc.getElementById('main'),
-      htmlDoc = document.implementation.createHTMLDocument(doc.title),
+      frag = doc.createDocumentFragment(),
+      dummy = doc.createElement('div'),
       newTitle;
-    htmlDoc.body.innerHTML = content;
-    newTitle = htmlDoc.getElementById('title');
-    mainEle.innerHTML = htmlDoc.getElementById('main').innerHTML;
+    frag.appendChild(dummy);
+    dummy.innerHTML = content;
+    newTitle = dummy.getElementsByClassName('title')[0];
+    mainEle.parentNode.replaceChild(dummy.getElementsByClassName('main')[0], mainEle);
+    dummy = null;
     doc.title = newTitle.innerHTML;
     return doc.title;
   };
